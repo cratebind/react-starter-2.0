@@ -1,0 +1,21 @@
+node_modules/
+.DS_Store
+*.log
+.next/
+.build/
+variables.env
+
+# mobile / react-native
+node_modules/**/*
+.expo/*
+npm-debug.*
+*.jks
+*.p12
+*.key
+*.mobileprovision
+*.apk
+
+# cypress
+
+cypress/screenshots
+cypress/videos
