@@ -12,6 +12,10 @@ export default class MyDocument extends Document {
     return { ...page, styleTags };
   }
 
+  componentDidCatch(error, errorInfo) {
+    console.log({ error, errorInfo });
+  }
+
   render() {
     return (
       <html lang="en-US">

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
-// import Header from './Header';
-// import Meta from './Meta';
+import Header from './Header';
+import Meta from './Meta';
 
 const theme = {
   red: '#FF0000',
@@ -22,7 +22,6 @@ const Inner = styled.div`
   margin: 0 auto;
   position: relative;
   display: flex;
-  height: calc(100vh - 40px);
 `;
 
 const GlobalStyle = createGlobalStyle`
@@ -56,57 +55,6 @@ const GlobalStyle = createGlobalStyle`
     all: unset;
     display: block;
   }
-
-  a {
-     text-decoration: none;
-  }
-
-  .text-input {
-    /* reset silly webkit styles */
-    &[type='text'],
-    &[type='email'],
-    &[type='password'] {
-      /* Remove First */
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-    }
-
-    display: block;
-    width: 100%;
-    padding: 0 0.5em;
-    height: 2.5em;
-    border-radius: 0.25em;
-    font-size: 16px;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    border: 1px solid #d9d9d9;
-
-    &[type='checkbox'],
-    &[type='radio'] {
-      display: inline-block;
-      width: auto;
-      height: auto;
-      padding: 0;
-    }
-    &::placeholder {
-      color: currentcolor;
-      opacity: 0.5;
-    }
-    &:focus {
-      border-color: #80bdff;
-      outline: 0;
-      box-shadow: 0 0 0 0.2rem rgba(54, 79, 107, 0.25);
-    }
-    textarea & {
-      padding: 0.5em;
-      height: auto;
-    }
-  }
-
-  svg {
-    height: 1.25rem;
-    width: 1.25rem;
-  }
 `;
 
 class Page extends Component {
@@ -116,8 +64,8 @@ class Page extends Component {
       <ThemeProvider theme={theme}>
         <StyledPage>
           <GlobalStyle />
-          {/* <Meta /> */}
-          {/* <Header /> */}
+          <Meta />
+          <Header />
           <Inner data-test="inner-page">{children}</Inner>
         </StyledPage>
       </ThemeProvider>

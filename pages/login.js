@@ -18,13 +18,11 @@ const Container = styled.div`
   }
 `;
 
-const Home = () => (
+const Login = () => (
   <Container className="hero">
-    <h1 className="title">React Starter Project</h1>
-    <p className="description">
-      To get started, edit <code>pages/index.js</code> and save to reload.
-    </p>
+    <h1 className="title">Login</h1>
+    <input type="text" />
   </Container>
 );
 
-export default Home;
+export default Login;

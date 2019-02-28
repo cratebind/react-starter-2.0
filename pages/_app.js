@@ -7,6 +7,7 @@ import ErrorBoundary from '../components/ErrorBoundary';
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
+    console.log('GETTING INITIAL PROPS');
     let pageProps = {};
 
     if (Component.getInitialProps) {
@@ -16,6 +17,10 @@ class MyApp extends App {
     // expose query to the user
     pageProps.query = ctx.query;
     return { pageProps };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.log({ error, errorInfo });
   }
 
   render() {

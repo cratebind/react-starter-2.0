@@ -1,59 +1,55 @@
-import React from 'react'
-import Link from 'next/link'
+import React from 'react';
+import Link from 'next/link';
+import styled from 'styled-components';
 
-const links = [
-  { href: 'https://github.com/segmentio/create-next-app', label: 'Github' }
-].map(link => {
-  link.key = `nav-link-${link.href}-${link.label}`
-  return link
-})
+const NavContainer = styled.ul`
+  all: unset;
+  box-sizing: border-box;
+  height: 65px;
+  display: flex;
+  padding: 15px;
+  align-items: center;
+  justify-content: center;
+  /* box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.06); */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+
+  .nav-content {
+    width: 100%;
+    max-width: 1024px;
+  }
+
+  a {
+    line-height: 1.65;
+    font-weight: 400;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    color: #757575;
+    font-size: 16px;
+
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #111;
+    }
+  }
+
+  a + a {
+    margin-left: 30px;
+  }
+`;
 
 const Nav = () => (
-  <nav>
-    <ul>
-      <li>
-        <Link prefetch href="/">
-          <a>Home</a>
-        </Link>
-      </li>
-      <ul>
-        {links.map(({ key, href, label }) => (
-          <li key={key}>
-            <Link href={href}>
-              <a>{label}</a>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </ul>
+  <NavContainer>
+    <div className="nav-content">
+      <Link href="/">
+        <a>Home</a>
+      </Link>
 
-    <style jsx>{`
-      :global(body) {
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir,
-          Helvetica, sans-serif;
-      }
-      nav {
-        text-align: center;
-      }
-      ul {
-        display: flex;
-        justify-content: space-between;
-      }
-      nav > ul {
-        padding: 4px 16px;
-      }
-      li {
-        display: flex;
-        padding: 6px 8px;
-      }
-      a {
-        color: #067df7;
-        text-decoration: none;
-        font-size: 13px;
-      }
-    `}</style>
-  </nav>
-)
+      <Link href="/login">
+        <a>Log In</a>
+      </Link>
+    </div>
+  </NavContainer>
+);
 
-export default Nav
+export default Nav;
