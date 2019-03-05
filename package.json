@@ -28,5 +28,16 @@
   },
   "devDependencies": {
     "eslint-plugin-import": "^2.16.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }
