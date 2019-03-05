@@ -19,3 +19,8 @@ npm-debug.*
 # cypress
 cypress/screenshots
 cypress/videos
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
