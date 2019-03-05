@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "ls ; NODE_ENV=production npm run build ; node server.js",
+    "start": "node server.js",
     "lint": "eslint . --fix"
   },
   "dependencies": {
