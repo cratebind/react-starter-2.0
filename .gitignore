@@ -4,6 +4,7 @@ node_modules/
 .next/
 .build/
 variables.env
+*.env
 
 # mobile / react-native
 node_modules/**/*
@@ -16,6 +17,5 @@ npm-debug.*
 *.apk
 
 # cypress
-
 cypress/screenshots
 cypress/videos
