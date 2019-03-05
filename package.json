@@ -13,6 +13,7 @@
     "cookie": "^0.3.1",
     "eslint": "^5.13.0",
     "eslint-config-cratebind": "^1.0.1",
+    "express": "^4.16.4",
     "graphql": "^14.1.1",
     "husky": "^1.3.1",
     "isomorphic-unfetch": "^3.0.0",
