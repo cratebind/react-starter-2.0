@@ -1,19 +1,26 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import NProgress from 'nprogress';
 import Router from 'next/router';
 
 // only show loading bar after delay
 class ProgressBar extends React.Component {
   static defaultProps = {
-    color: '#2299DD',
+    // color: '#2299DD',
     showAfterMs: 400,
-    spinner: true,
+    // spinner: true,
+  };
+
+  static propTypes = {
+    showAfterMs: PropTypes.number,
+    // spinner: PropTypes.boolean,
+    // color: PropTypes.string,
   };
 
   timer = null;
 
   componentDidMount() {
-    const { options } = this.props;
+    const options = {};
 
     if (options) {
       NProgress.configure(options);

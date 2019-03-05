@@ -1,7 +1,5 @@
 import App, { Container } from 'next/app';
 import { ApolloProvider } from 'react-apollo';
-// import Error from 'next/error';
-import Rollbar from 'rollbar';
 import Page from '../components/Page';
 import withApollo from '../lib/withApollo';
 import AppProvider from '../components/AppContext';
@@ -43,8 +41,6 @@ class MyApp extends App {
 
   componentDidCatch(error, errorInfo) {
     handleError(error, errorInfo);
-    // Rollbar.error('Something went wrong', error);
-    // console.error({ error, errorInfo });
   }
 
   render() {

@@ -1,7 +1,11 @@
-const webpack = require('webpack');
+// eslint-disable-next-line
+// const webpack = require('webpack');
 
 module.exports = {
-  webpack: (config, { dev, isServer, buildId }) => {
+  webpack: (
+    config
+    // { dev, isServer, buildId }
+  ) => {
     // Fixes npm packages that depend on `fs` module
     config.node = {
       fs: 'empty',

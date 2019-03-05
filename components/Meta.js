@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { SITE_TITLE } from '../config';
 
 const Meta = () => (
   <Head>
@@ -6,8 +7,7 @@ const Meta = () => (
     <meta charSet="utf-8" />
     <link rel="shortcut icon" href="/static/favicon.png" />
     <link rel="stylesheet" type="text/css" href="/static/nprogress.css" />
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js" />
-    <title>React Starter Project</title>
+    <title>{SITE_TITLE}</title>
   </Head>
 );
 

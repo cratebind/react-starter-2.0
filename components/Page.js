@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
+import PropTypes from 'prop-types';
 import Header from './Header';
 import Meta from './Meta';
 import { GlobalStyle } from './GlobalStyle';
@@ -26,6 +27,13 @@ const Inner = styled.div`
 `;
 
 class Page extends Component {
+  static propTypes = {
+    children: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.node),
+      PropTypes.node,
+    ]),
+  };
+
   render() {
     const { children } = this.props;
     return (

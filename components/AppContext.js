@@ -27,7 +27,6 @@ class AppProvider extends Component {
 
   render() {
     const { children } = this.props;
-    const { notifications, modalOpen, modalComponent } = this.state;
     return (
       <AppContext.Provider
         value={{
