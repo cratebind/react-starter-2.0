@@ -10,6 +10,7 @@
     "apollo-boost": "^0.3.1",
     "apollo-link-batch-http": "^1.2.8",
     "apollo-link-context": "^1.0.14",
+    "babel-plugin-styled-components": "^1.10.0",
     "cookie": "^0.3.1",
     "eslint": "^5.13.0",
     "eslint-config-cratebind": "^1.0.1",
