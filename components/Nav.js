@@ -10,7 +10,6 @@ const NavContainer = styled.ul`
   padding: 15px;
   align-items: center;
   justify-content: center;
-  /* box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.06); */
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 
   .nav-content {
